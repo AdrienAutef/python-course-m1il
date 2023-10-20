@@ -23,10 +23,10 @@ while True:
     except ValueError:
         print("Erreur : Entrez un nombre valide.")
         
-if total_notes == 0:
-    print("Aucune note n'a été entrée.")
-else:
+try:
     moyenne = somme_notes / total_notes
     moyenne_rounded = round(moyenne, 2)
     print(f"Nombre de notes entrées : {total_notes}")
     print(f"Moyenne des notes arrondie au centième près : {moyenne_rounded}")
+except ZeroDivisionError:
+    print("Nombre de notes insuffisants : division par zéro impossible")
