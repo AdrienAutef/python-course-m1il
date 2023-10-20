@@ -27,5 +27,6 @@ if total_notes == 0:
     print("Aucune note n'a été entrée.")
 else:
     moyenne = somme_notes / total_notes
+    moyenne_rounded = round(moyenne, 2)
     print(f"Nombre de notes entrées : {total_notes}")
-    print(f"Moyenne des notes : {moyenne}")
+    print(f"Moyenne des notes arrondie au centième près : {moyenne_rounded}")
